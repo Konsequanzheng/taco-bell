@@ -20,7 +20,32 @@
 }
 
 body {
-  background: var(--background);
+  background: linear-gradient(
+    135deg,
+    #ff0000 0%,
+    #ff7f00 14.28%,
+    #ffff00 28.56%,
+    #00ff00 42.84%,
+    #0000ff 57.12%,
+    #4b0082 71.4%,
+    #9400d3 85.68%,
+    #ff0000 100%
+  );
+  background-size: 400% 400%;
+  animation: rainbow 15s ease infinite;
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+}
+
+@keyframes rainbow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
